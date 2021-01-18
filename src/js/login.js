@@ -1,19 +1,33 @@
-function login(event) {
 
-    // Where did the event happend
-    const form = event.currentTarget;
+window.onload = (event) => {
 
-    // Collect Data from Form
-    const username = form.elements["inputEmail"].value; 
-    const password = form.elements["inputPassword"].value; 
+    const loginForm = document.querySelector(".form-signin>form");
 
-    // Perform Logic
-    if(username == "2@3.om" && password == "password") {
-        window.location.href = '/'; 
-    }
-    else {
-        alert("Invalid User")
-    }
+    loginForm.onsubmit = function(event){
+        
+        event.preventDefault();
+
+        // Where did the event happend
+        const form = event.currentTarget;
     
-    return false;
-}
+        // Collect Data from Form
+        const userName = form.elements["userName"].value; 
+        const password = form.elements["password"].value; 
+    
+        // Perform Logic
+        if(userName == "user" && password == "password") {
+            window.location.href = '/'; 
+        }
+        else {
+            alert("Invalid User")
+        }
+        
+        return false;
+        
+    };
+
+
+};
+
+
+
