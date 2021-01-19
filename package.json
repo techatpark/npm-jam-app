@@ -47,5 +47,8 @@
   },
   "browserslist": [
     "defaults"
-  ]
+  ],
+  "dependencies": {
+    "body-parser": "^1.19.0"
+  }
 }
